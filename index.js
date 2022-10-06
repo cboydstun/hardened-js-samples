@@ -48,3 +48,8 @@ console.log(Object.isFrozen(capability.wallet));
 // Demonstrate frozen object.
 capability.incr = () => { console.log('launch the missiles!') };
 capability.incr()
+
+// to elaborate:
+// Alice creates incapable and passes it to Bob (who is supposed to count people in a room) and Mallory.
+// Mallory does incapable.incr = () => { console.log('launch the missiles!') };.
+// Then Bob does incapable.incr() , thinking he's just doing his job, not realizing he's launching missiles!
