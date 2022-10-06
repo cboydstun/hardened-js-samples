@@ -33,9 +33,18 @@ console.log(Object.isFrozen(incapable.inc));
 // false
 console.log(Object.isFrozen(incapable.wallet));
 // false
+
+// Demonstrate insecurity of the object.
+incapable.incr = () => { console.log('launch the missiles!') };
+incapable.incr()
+
 console.log(Object.isFrozen(capability));
 // true
 console.log(Object.isFrozen(capability.inc));
 // true
 console.log(Object.isFrozen(capability.wallet));
 // true
+
+// Demonstrate frozen object.
+capability.incr = () => { console.log('launch the missiles!') };
+capability.incr()
