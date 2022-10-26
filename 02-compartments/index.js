@@ -18,22 +18,22 @@ const makeCounter = init => {
 };
 
 /* Creating a new counter object with the value of 1. */
-const compartment1 = makeCounter(1); 
-/* Calling the increment function on the compartment1 object. */
-console.log(compartment1.increment()); // 2 
+const counter1 = makeCounter(1); 
+/* Calling the increment function on the counter1 object. */
+console.log(counter1.increment()); // 2 
 
-const compartment2 = compartment1.makeOffsetCounter(10);
-console.log(compartment2.increment()); // 13
-/* Calling the increment function on both compartment1 and compartment2 and returning the values. */
-console.log([compartment1.increment(), compartment2.increment()]); // [3, 14]
+const counter2 = counter1.makeOffsetCounter(10);
+console.log(counter2.increment()); // 13
+/* Calling the increment function on both counter1 and counter2 and returning the values. */
+console.log([counter1.increment(), counter2.increment()]); // [3, 14]
 
 //pervasive mutability
 //gives increment unwanted properties
-compartment1.increment = () => console.log('launch the missiles!');
-compartment1.increment(); //console log "launch the missiles!"
+counter1.increment = () => console.log('launch the missiles!');
+counter1.increment(); //console log "launch the missiles!"
 
 //defensive objects
-//frozen compartment
-const compartment3 = Object.freeze(compartment1.makeOffsetCounter(10));
-// compartment3.increment = () => { console.log('launch the missiles!'); } //throws error
-console.log(compartment3.increment()); // 14
+//frozen counter
+const counter3 = Object.freeze(counter1.makeOffsetCounter(10));
+// counter3.increment = () => { console.log('launch the missiles!'); } //throws error
+console.log(counter3.increment()); // 14
