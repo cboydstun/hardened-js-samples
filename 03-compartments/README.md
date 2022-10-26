@@ -1,0 +1,3 @@
+# [SES Compartment Constructor](https://www.npmjs.com/package/ses)
+
+SES introduces the Compartment constructor. A compartment is an evaluation and execution environment with its own globalThis and wholly independent system of modules, but otherwise shares the same batch of intrinsics like Array with the surrounding compartment. The concept of a compartment implies an initial compartment, the initial execution environment of a realm.
