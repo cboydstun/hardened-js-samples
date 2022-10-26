@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@agoric/notifier": "^0.5.1",
-    "@endo/init": "^0.5.51"
+    "@endo/init": "^0.5.51",
+    "nodemon": "^2.0.20"
   }
 }
