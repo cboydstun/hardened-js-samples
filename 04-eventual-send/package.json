@@ -11,6 +11,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@endo/captp": "^2.0.17"
+    "@agoric/far": "^0.1.1",
+    "@endo/captp": "^2.0.17",
+    "@endo/init": "^0.5.51"
   }
 }

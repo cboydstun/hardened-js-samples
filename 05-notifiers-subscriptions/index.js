@@ -1,4 +1,5 @@
 // https://docs.agoric.com/guides/js-programming/notifiers.html#notifiers-and-subscriptions
+import '@endo/init'
 
 import { makeNotifierKit } from '@agoric/notifier';
 import { makeSubscriptionKit } from '@agoric/notifier';
