@@ -1,7 +1,4 @@
 //https://hackmd.io/@ZFlbCaR1Q06UzHk6tcn2dg/rk1yMNeQF#
-import "ses";
-
-lockdown();
 
 //  It returns an object with three methods, one of which returns a new counter object
 const makeCounter = init => {
