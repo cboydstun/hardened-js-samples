@@ -1,4 +1,4 @@
-# Hardened JS Fundamentals: [Hardened JS Fundamentals](https://docs.agoric.com/guides/js-programming/)
+# [Hardened JS Fundamentals](https://docs.agoric.com/guides/js-programming/)
 Curated list of coding samples following the Agoric Hardened JS Fundamentals guide.
 
 Outline:
