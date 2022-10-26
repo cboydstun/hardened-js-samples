@@ -17,7 +17,7 @@ const incapable = {
 };
 
 /* Freezing the object and its methods. */
-const capability = harden({
+const capable = harden({
   inc() {
     counter++;
   },
@@ -38,16 +38,16 @@ console.log(Object.isFrozen(incapable.wallet));
 incapable.incr = () => { console.log('launch the missiles!') };
 incapable.incr()
 
-console.log(Object.isFrozen(capability));
+console.log(Object.isFrozen(capable));
 // true
-console.log(Object.isFrozen(capability.inc));
+console.log(Object.isFrozen(capable.inc));
 // true
-console.log(Object.isFrozen(capability.wallet));
+console.log(Object.isFrozen(capable.wallet));
 // true
 
 // Demonstrate frozen object.
-capability.incr = () => { console.log('launch the missiles!') };
-capability.incr()
+capable.incr = () => { console.log('launch the missiles!') };
+capable.incr()
 
 // to elaborate:
 // Alice creates incapable and passes it to Bob (who is supposed to count people in a room) and Mallory.
