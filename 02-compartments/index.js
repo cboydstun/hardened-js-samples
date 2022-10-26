@@ -3,32 +3,37 @@ import "ses";
 
 lockdown();
 
+/**
+ * It returns an object with three methods, one of which returns a new counter object
+ */
 const makeCounter = init => {
+/* Creating a variable called value and assigning it the value of init. */
     let value = init;
-    return harden({
+/* Returning an object with three functions. */
+    return {
         increment: () => (value += 1),
         decrement: () => (value -= 1),
         makeOffsetCounter: delta => makeCounter(value + delta),
-    });
+    };
 };
 
-const c1 = makeCounter(1); c1.increment();
-const c2 = c1.makeOffsetCounter(10);
-c2.increment();
-[c1.increment(), c2.increment()];
+/* Creating a new counter object with the value of 1. */
+const compartment1 = makeCounter(1); 
+/* Calling the increment function on the compartment1 object. */
+console.log(compartment1.increment()); // 2 
 
+const compartment2 = compartment1.makeOffsetCounter(10);
+console.log(compartment2.increment()); // 13
+/* Calling the increment function on both compartment1 and compartment2 and returning the values. */
+console.log([compartment1.increment(), compartment2.increment()]); // [3, 14]
 
 //pervasive mutability
 //gives increment unwanted properties
-c1.increment = () => console.log('launch the missiles!');
-//console log "launch the missiles!"
-c1.increment();
-
+compartment1.increment = () => console.log('launch the missiles!');
+compartment1.increment(); //console log "launch the missiles!"
 
 //defensive objects
-//frozen object
-const c3 = Object.freeze(c1.makeOffsetCounter(10));
-//attempt to add property to frozen object
-c3.increment = () => { console.log('launch the missiles!'); }
-//returns correct value
-c3.increment()
+//frozen compartment
+const compartment3 = Object.freeze(compartment1.makeOffsetCounter(10));
+// compartment3.increment = () => { console.log('launch the missiles!'); } //throws error
+console.log(compartment3.increment()); // 14
