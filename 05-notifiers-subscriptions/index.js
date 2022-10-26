@@ -33,8 +33,7 @@ const observer = harden({
     fail: reason => console.log('failed', reason),
 });
 observeIteration(subscription, observer);
-  // eventually prints
-  // non-final-value a
-  // non-final-value b
-  // finished done
-
+// eventually prints
+// non-final-value a
+// non-final-value b
+// finished done

@@ -3,13 +3,11 @@ import "ses";
 
 lockdown();
 
-/**
- * It returns an object with three methods, one of which returns a new counter object
- */
+//  It returns an object with three methods, one of which returns a new counter object
 const makeCounter = init => {
-/* Creating a variable called value and assigning it the value of init. */
+    /* Creating a variable called value and assigning it the value of init. */
     let value = init;
-/* Returning an object with three functions. */
+    /* Returning an object with three functions. */
     return {
         increment: () => (value += 1),
         decrement: () => (value -= 1),
@@ -18,7 +16,7 @@ const makeCounter = init => {
 };
 
 /* Creating a new counter object with the value of 1. */
-const counter1 = makeCounter(1); 
+const counter1 = makeCounter(1);
 /* Calling the increment function on the counter1 object. */
 console.log(counter1.increment()); // 2 
 

@@ -2,9 +2,10 @@
 Curated list of coding samples following the Agoric Hardened JS Fundamentals guide.
 
 Outline:
-- 01 - Defense Objects
+- 01 - Defensive Objects
 - 02 - Hardened Objects
 - 03 - Compartments 
-- 04 - Eventual Send
+- 04 - Eventual Send - FIX ME
 - 05 - Notifiers and Subscriptions
 - 06 - Remotables
+- 07 - Marshaling
