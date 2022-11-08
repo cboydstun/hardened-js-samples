@@ -1,5 +1,12 @@
 // https://docs.agoric.com/guides/js-programming/notifiers.html#notifiers-and-subscriptions
 import '@endo/init'
+import rawTest from 'ava';
+import { wrapTest } from '@endo/ses-ava';
+
+const test = wrapTest(rawTest);
+test('something', t => {
+    t.is(0, 1)
+})
 
 import { makeNotifierKit } from '@agoric/notifier';
 import { makeSubscriptionKit } from '@agoric/notifier';

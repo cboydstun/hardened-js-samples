@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava ./index.js",
     "start": "nodemon index.js"
   },
   "keywords": [],
@@ -13,6 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "nodemon": "^2.0.20",
-    "ses": "^0.17.0"
+    "ses": "^0.17.0",
+    "@endo/init": "^0.5.51"
+  },
+  "devDependencies": {
+    "@endo/ses-ava": "^0.2.35",
+    "ava": "^5.0.1"
   }
 }
