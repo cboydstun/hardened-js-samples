@@ -1,4 +1,4 @@
-# [Hardened JS Fundamentals](https://docs.agoric.com/guides/js-programming/)
+# [Hardened JS Code Examples](https://docs.agoric.com/guides/js-programming/)
 Curated list of coding samples following the Agoric Hardened JS Fundamentals guide.
 - 01 - Defensive Objects
 - 02 - Hardened Objects
@@ -8,7 +8,7 @@ Curated list of coding samples following the Agoric Hardened JS Fundamentals gui
 - 06 - Marshaling
 - 07 - Notifiers and Subscriptions - FIX ME
 
-## [Hardened JS](https://www.npmjs.com/package/ses)
+## [SES](https://www.npmjs.com/package/ses) and [Endo](https://www.npmjs.com/package/@endo/init)
 
 Hardened JavaScript is highly compatible with ordinary JavaScript. Most existing JavaScript libraries can run on hardened JavaScript.
 
