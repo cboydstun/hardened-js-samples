@@ -26,24 +26,8 @@ const capable = harden({
   },
 });
 
-/* Checking if the object and its methods are frozen. */
-console.log(Object.isFrozen(incapable));
-// false
-console.log(Object.isFrozen(incapable.inc));
-// false
-console.log(Object.isFrozen(incapable.wallet));
-// false
-
-// Demonstrate insecurity of the object.
-incapable.incr = () => { console.log('launch the missiles!') };
-incapable.incr()
-
-console.log(Object.isFrozen(capable));
-// true
-console.log(Object.isFrozen(capable.inc));
-// true
-console.log(Object.isFrozen(capable.wallet));
-// true
+// export incapable and capable
+export { incapable, capable };
 
 // Demonstrate frozen object. Throws error.
 // capable.incr = () => { console.log('launch the missiles!') };
