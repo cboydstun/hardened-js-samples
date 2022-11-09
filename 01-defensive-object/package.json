@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ava ./index.js",
+    "test": "ava ./index.test.js",
     "start": "nodemon index.js"
   },
   "keywords": [],
